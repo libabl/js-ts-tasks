@@ -4,9 +4,9 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-    return function (address1) {
-      const address2 = Object.values(address1);
-      return address2.join(', ');
-    };
+  function address(adress) {
+    return `${adress.street}, ${adress.house}, ${adress.apartment}, ${adress.city}, ${adress.postalCode}, ${adress.country}`;
+  }
+  return address;
 };
 
