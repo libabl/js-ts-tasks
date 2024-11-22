@@ -14,7 +14,7 @@ module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
     order.forEach(key => {
       address2 += address1[key] + ', ';
     });
-    address2 = address2.slice(0, -2); // Убираем лишние ", " в конце строки
+    address2 = address2.slice(0, -2); 
     return address2;
   };
 };
