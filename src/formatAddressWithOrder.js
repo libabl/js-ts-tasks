@@ -9,13 +9,10 @@
  * @returns {function}
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  return function (address1) {
-    let address2 = '';
-    order.forEach(key => {
-      address2 += address1[key] + ', ';
-    });
-    address2 = address2.slice(0, -2); 
-    return address2;
-  };
+  function address(adress) {
+    return `${adress[order[0]]}, ${adress[order[1]]}, ${adress[order[2]]}, ${adress[order[3]]}, ${adress[order[4]]}, ${adress[order[5]]}`;
+  }
+  return address;
 };
+  
 
