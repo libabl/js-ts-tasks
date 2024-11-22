@@ -9,5 +9,13 @@
  * @returns {function}
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function (address1) {
+    let address2 = '';
+    order.forEach(key => {
+      address2 += address1[key] + ', ';
+    });
+    address2 = address2.slice(0, -2); // Убираем лишние ", " в конце строки
+    return address2;
+  };
 };
+

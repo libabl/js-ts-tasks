@@ -4,5 +4,9 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+    return function (address1) {
+      const address2 = Object.values(address1);
+      return address2.join(', ');
+    };
 };
+
