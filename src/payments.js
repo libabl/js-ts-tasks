@@ -23,5 +23,8 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  function funct(sum1, sum2){
+    return (Object.values(sum1).reduce((acc, val) => acc + val, 0)) - (Object.values(sum2).reduce((acc, val) => acc + val, 0));
+  }
+  return funct;
 };
